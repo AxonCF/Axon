@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXON LEAGUE | Beyond the Game</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .main-card {
+            border: 1px solid #1a1a1a;
+            padding: 40px;
+            border-radius: 15px;
+            background: #0a0a0a;
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(45deg, #00ffff, #0088ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        .tagline { color: #555; font-size: 0.8rem; margin-bottom: 30px; }
+        .search-btn {
+            background: #00ffff;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .search-btn:hover {
+            box-shadow: 0 0 20px #00ffff;
+            transform: scale(1.02);
+        }
+        .status { margin-top: 15px; color: #00ff88; display: none; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="main-card">
+        <h1>AXON</h1>
+        <div class="tagline">BEYOND THE GAME | EST. 2026</div>
+        <button class="search-btn" id="findBtn" onclick="search()">Найти матч</button>
+        <div class="status" id="status">Подключаемся к серверу поиска...</div>
+    </div>
+
+    <script>
+        function search() {
+            document.getElementById('findBtn').innerText = 'В ОЧЕРЕДИ...';
+            document.getElementById('status').style.display = 'block';
+            // Скоро добавим отправку ника в твой ТГ
+        }
+    </script>
+</body>
+</html>
